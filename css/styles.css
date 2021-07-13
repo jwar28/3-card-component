@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  margin: 10% 20% 10% 15%;
+  font-size: 2.5rem;
+  color: #f2f2f2;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 10% 10% 0 15%;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+img {
+  margin: 15% 20% 0 15%;
+}
+
+button {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 20% 15% 15%;
+  outline: none;
+  border: 0.1875rem solid #f2f2f2;
+  background-color: #f2f2f2;
+  padding: 0.625rem;
+  border-radius: 3.125rem;
+  width: 40%;
+  cursor: pointer;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.cards-container {
+  margin: 3% 5% 3% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.card-1 {
+  background-color: #e38826;
+}
+
+.card-1 .button-1 {
+  color: #e38826;
+}
+
+.card-2 {
+  background-color: #006970;
+}
+
+.card-2 .button-2 {
+  color: #006970;
+}
+
+.card-3 {
+  background-color: #004241;
+}
+
+.card-3 .button-3 {
+  color: #004241;
+}
+
+[class*="button-"]:hover {
+  background: none;
+  color: white;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (max-width: 47.9375rem) {
+  [class*="card-"] {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+  }
+  button {
+    margin-top: 10%;
+    width: 50%;
+  }
+  .card-1 {
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  }
+  .card-3 {
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+  }
+}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 48rem) {
+  [class*="card-"] {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 28%;
+            flex: 0 0 28%;
+  }
+  .card-1 {
+    border-top-left-radius: 2%;
+    border-bottom-left-radius: 2%;
+  }
+  .card-3 {
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

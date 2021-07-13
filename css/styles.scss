@@ -1,0 +1,137 @@
+@function rem($rawDimension) {
+  $rem: $rawDimension / 16;
+  @return $rem * 1rem;
+}
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$Very-light-gray: hsl(0, 0%, 95%);
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+html {
+  box-sizing: border-box;
+  background-color: $Very-light-gray;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  margin: 10% 20% 10% 15%;
+  font-size: rem(40);
+  color: $Very-light-gray;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 10% 10% 0 15%;
+  font-size: rem(15);
+  color: $Transparent-white;
+}
+
+img {
+  margin: 15% 20% 0 15%;
+}
+
+button {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 20% 15% 15%;
+  outline: none;
+  border: rem(3) solid $Very-light-gray;
+  background-color: $Very-light-gray;
+  padding: rem(10);
+  border-radius: rem(50);
+  width: 40%;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.cards-container {
+  margin: 3% 5% 3% 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.card-1 {
+  background-color: $Bright-orange;
+
+  .button-1 {
+    color: $Bright-orange;
+  }
+}
+
+.card-2 {
+  background-color: $Dark-cyan;
+
+  .button-2 {
+    color: $Dark-cyan;
+  }
+}
+
+.card-3 {
+  background-color: $Very-dark-cyan;
+
+  .button-3 {
+    color: $Very-dark-cyan;
+  }
+}
+
+[class*="button-"]:hover {
+  background: none;
+  color: white;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (max-width: rem(767)) {
+  [class*="card-"] {
+    flex: 0 0 90%;
+  }
+
+  button {
+    margin-top: 10%;
+    width: 50%;
+  }
+
+  .card-1 {
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  }
+
+  .card-3 {
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+  }
+}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: rem(768)) {
+  [class*="card-"] {
+    flex: 0 0 28%;
+  }
+
+  .card-1 {
+    border-top-left-radius: 2%;
+    border-bottom-left-radius: 2%;
+  }
+
+  .card-3 {
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+  }
+}
