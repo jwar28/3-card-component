@@ -111,6 +111,9 @@ main {
     margin-top: 10%;
     width: 50%;
   }
+  main {
+    height: 100%;
+  }
   .card-1 {
     border-top-left-radius: 2%;
     border-top-right-radius: 2%;
